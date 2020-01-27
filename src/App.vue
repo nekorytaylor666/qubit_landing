@@ -1,32 +1,50 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Navbar></Navbar>
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <div class="section">
+        <div class="content">hello</div>
+      </div>
+      <div class="section">
+        <div class="content">hello</div>
+      </div>
+      <div class="section">
+        <div class="content">hello</div>
+      </div>
+    </full-page>
   </div>
 </template>
 
+<script>
+import Navbar from '@/components/Navbar.vue';
+export default {
+  components: {
+    Navbar,
+  },
+  data() {
+    return {
+      options: {
+        menu: '#menu',
+        anchors: ['page1', 'page2', 'page3'],
+      },
+    };
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import 'normalize-scss';
+@include normalize();
+full-page {
+  height: 300px;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.section {
+  .content {
+    padding-top: 4rem;
   }
 }
 </style>
