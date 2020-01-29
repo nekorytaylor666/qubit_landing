@@ -6,14 +6,19 @@
       >
       <div class="full-nav" v-if="flop" style="animation-duration: 0.3s">
         <div class="logo">
-          <img src="../assets/test-logo.png" alt="logo" />
-          I-guard
+          <img src="../assets/qubit-logo-min.png" alt="logo" />
+          Qubit
         </div>
         <ul>
-          <li>О нас</li>
-          <li>Уалейкум</li>
-          <li>О нас</li>
-          <li>Уалейкум</li>
+          <li>
+            <a href="#page1">Уалейкум</a>
+          </li>
+          <li>
+            <a href="#page2">Уалейкум</a>
+          </li>
+          <li>
+            <a href="#page3">Уалейкум</a>
+          </li>
         </ul>
       </div>
     </transition>
@@ -21,15 +26,27 @@
 </template>
 
 <script>
+function detectmob() {
+  if (window.innerWidth <= 800 && window.innerHeight <= 600) {
+    return true;
+  } else {
+    return false;
+  }
+}
 export default {
   data() {
     return {
       flop: true,
     };
   },
+  mounted() {
+    if (detectmob()) {
+      console.log(detectmob());
+      this.flop = false;
+    }
+  },
   methods: {
     flopNavbar() {
-      console.log(!this.flop);
       this.flop = !this.flop;
     },
   },
@@ -39,6 +56,12 @@ export default {
 <style lang="scss" scoped>
 $break-tablet: 840px;
 $break-small: 620px;
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 i {
   display: none;
   position: fixed;
@@ -57,7 +80,6 @@ i {
   z-index: 20;
   width: 100%;
   height: 4rem;
-  background: white;
   display: flex;
 
   justify-content: space-between;
@@ -69,7 +91,11 @@ i {
     display: flex;
     justify-content: start;
     align-items: center;
-    column-gap: 1rem;
+    font-size: 1.5em;
+    font-weight: 800;
+    img {
+      margin-right: 1rem;
+    }
   }
 }
 img {
@@ -83,16 +109,19 @@ ul {
   align-items: center;
   padding-right: 4rem;
   flex-wrap: wrap;
-  grid-column-gap: 2rem;
-  grid-row-gap: 1rem;
+
   text-align: center;
   li {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
     cursor: pointer;
   }
 }
 @media screen and (max-width: $break-small) {
   .full-nav {
+    background: white;
     height: auto;
+    padding-bottom: 2rem;
   }
   ul {
     width: 100%;
@@ -107,5 +136,3 @@ ul {
   }
 }
 </style>
-
-

@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import VueFullPage from 'vue-fullpage.js';
-
+import 'normalize.css'; // Note this
 Vue.use(VueFullPage);
 
 Vue.config.productionTip = false;

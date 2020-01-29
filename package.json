@@ -11,6 +11,8 @@
     "animate.css": "^3.7.2",
     "core-js": "^3.4.4",
     "normalize-scss": "^7.0.1",
+    "normalize.css": "^8.0.1",
+    "normalize.scss": "^0.1.0",
     "vue": "^2.6.10",
     "vue-fullpage.js": "^0.1.5",
     "vue-router": "^3.1.3",
