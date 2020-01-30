@@ -1,52 +1,50 @@
 <template>
   <div class="old section">
-    <h2 class="title">Безопасность с традиционными охранными системами</h2>
+    <h2 class="title">Традиционные охранные системы</h2>
     <div class="content">
-      <div class="expenses">
-        <h3 class="subtitle">Охранное агенство</h3>
-        <div class="expenses-group">
-          <ul class="expenses-list">
-            <li class="expense">
-              <div class="price">
-                <span>40$ в месяц</span>
-              </div>
-              <h4 class="expenses-title">Сигнализация и группа быстрого реагирования</h4>
-            </li>
-            <li class="expense">
-              <div class="price">
-                <span>500$ в месяц</span>
-              </div>
-              <h4 class="expense-title">Охранник</h4>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="expenses">
-        <h3 class="subtitle">Видеонаблюдения</h3>
-        <div class="expenses-group">
-          <ul class="expenses-list">
-            <li class="expense">
-              <div class="price">
-                <span>30$ в месяц</span>
-              </div>
-              <h4 class="expenses-title">Камера</h4>
-            </li>
-            <li class="expense">
-              <div class="price">
-                <span>100$ в месяц</span>
-              </div>
-              <h4 class="expense-title">Видео-регистратор</h4>
-            </li>
-            <li class="expense">
-              <div class="price">
-                <span>1000$ в месяц</span>
-              </div>
-              <h4 class="expense-title">Процессор</h4>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <ul>
+        <li>
+          <div class="expense">
+            <span class="expense-title">Сигнализация</span>
+            <span class="price">40$ в месяц</span>
+          </div>
+        </li>
+        <li>
+          <div class="expense">
+            <span class="expense-title">Группы быстрого реагирования</span>
+            <span class="price">40$ в месяц</span>
+          </div>
+        </li>
+        <li>
+          <div class="expense">
+            <span class="expense-title">Охранник</span>
+            <span class="price">500$ в месяц</span>
+          </div>
+        </li>
+        <li>
+          <div class="expense">
+            <span class="expense-title">Камера</span>
+            <span class="price">30$ за штуку</span>
+          </div>
+        </li>
+        <li>
+          <div class="expense">
+            <span class="expense-title">Видео-регистратор</span>
+            <span class="price">100$ за штуку</span>
+          </div>
+        </li>
+        <li>
+          <div class="expense">
+            <span class="expense-title">Процесс</span>
+            <span class="price">1000$ за штуку</span>
+          </div>
+        </li>
+      </ul>
     </div>
+    <span class="sum">
+      Итого:
+      <span class="sum-old"><span class="digit">2</span>000$</span>
+    </span>
   </div>
 </template>
 
@@ -55,11 +53,31 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.sum {
+  font-size: 2rem;
+  .sum-old {
+    color: lightcoral;
+    font-weight: bold;
+  }
+}
+
+.digit {
+  padding: 0 0.5rem;
+}
+
 .content {
-  height: 600px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 400px;
 }
 .title {
   text-align: center;
+  height: 80px;
+  max-width: 500px;
+  display: flex;
+
+  align-items: center;
 }
 .expenses-group {
   display: flex;
@@ -81,14 +99,11 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e53935;
-  border-radius: 15px;
-  color: white;
+  color: lightcoral;
   font-weight: 800;
   padding: 1rem;
-  width: 130px;
   height: 30px;
-  text-align: center;
+  text-align: initial;
 }
 
 .expenses-list {
@@ -103,9 +118,9 @@ export default {};
 .expense {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: start;
+  grid-template-columns: 50% 50%;
   align-items: center;
+  justify-content: center;
 }
 
 .section {

@@ -21,7 +21,7 @@ section {
   width: 100%;
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 60%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .old {

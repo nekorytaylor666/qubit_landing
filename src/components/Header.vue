@@ -2,7 +2,11 @@
   <div class="container">
     <div class="header">
       <div class="image">
-        <img id="watch" src="../assets/vectors/mobile_unlock.svg" alt="iguard" />
+        <img
+          id="watch"
+          src="../assets/vectors/mobile_unlock.svg"
+          alt="iguard"
+        />
         <h1>I-Guard</h1>
         <h2>ВИДЕОНАБЛЮДЕНИЕ НОВОГО ПОКОЛЕНИЯ</h2>
       </div>
@@ -117,7 +121,7 @@ ul {
   display: flex;
   justify-content: center;
   img {
-    width: 80%;
+    height: 400px;
     object-fit: cover;
   }
 }
@@ -146,7 +150,16 @@ h1 {
   opacity: 0.1;
   z-index: 1;
 }
+@media only screen and (max-device-width: 480px) {
+  /* Styles */
+  .image {
+    img {
+      width: auto;
 
+      height: 150px;
+    }
+  }
+}
 /* #watch {
   margin: 0 auto;
   width: 80%;

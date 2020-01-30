@@ -80,9 +80,19 @@ export default {
 <style lang="scss">
 @import 'normalize-scss';
 @include normalize();
+
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
+
+@media only screen and (max-device-width: 480px) {
+  /* Styles */
+  body {
+    font-size: 12px;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
