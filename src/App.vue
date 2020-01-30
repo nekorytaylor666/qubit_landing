@@ -44,33 +44,11 @@ export default {
   data() {
     return {
       options: {
-        menu: '#menu',
-        lockAnchors: false,
-        navigation: false,
-        navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
-        showActiveTooltip: false,
-        slidesNavigation: false,
-        slidesNavPosition: 'bottom',
-        anchors: ['page1', 'page2', 'page3'],
+        anchors: ['aboutus', 'versus', 'slides'],
         verticalCentered: false,
-        scrollHorizontally: true,
+        lazyLoading: true,
         //Accessibility
         keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-
-        //Design
-        controlArrows: true,
-        responsiveWidth: 0,
-        responsiveHeight: 0,
-        responsiveSlides: false,
-        parallax: false,
-        parallaxOptions: {
-          type: 'reveal',
-          percentage: 62,
-          property: 'translate',
-        },
       },
     };
   },
@@ -89,7 +67,7 @@ body {
 @media only screen and (max-device-width: 480px) {
   /* Styles */
   body {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 

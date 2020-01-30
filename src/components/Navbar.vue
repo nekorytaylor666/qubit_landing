@@ -1,8 +1,15 @@
 <template>
   <nav>
-    <i class="fas ham" :class="{ 'fa-bars': !flop, 'fa-times': flop }" @click="flopNavbar"></i>
+    <i
+      class="fas ham"
+      :class="{ 'fa-bars': !flop, 'fa-times': flop }"
+      @click="flopNavbar"
+    ></i>
 
-    <transition enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
+    <transition
+      enter-active-class="animated slideInDown"
+      leave-active-class="animated slideOutUp"
+    >
       >
       <div class="full-nav" v-if="flop" style="animation-duration: 0.3s">
         <div class="logo">
@@ -41,7 +48,6 @@ export default {
   },
   mounted() {
     if (detectmob()) {
-      console.log(detectmob());
       this.flop = false;
     }
   },
